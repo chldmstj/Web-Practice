@@ -2,7 +2,7 @@ from flask import Flask,render_template,request,jsonify
 from pymongo import MongoClient
 import requests
 from bs4 import BeautifulSoup
-#client = MongoClient('mongodb://EUNSEO:1234@15.165.235.114', 27017)
+#client = MongoClient('mongodb://EUNSEO:####@15.165.235.114', 27017)
 client=MongoClient('localhost',27017)
 db = client.dbmemo
 app = Flask(__name__)
