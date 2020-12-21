@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <script>
+        function postArticle() {
+  $.ajax({
+    type: "POST",
+    url: "/post",
+    data: {'test':'test'},
+    success: function (response) { // 성공하면
+      if (response['result'] == 'success') {
+        alert(response['msg']);
+      }
+    }
+  })
+}
+
+
+
+    </script>
+</head>
+<body>
+    <button type="button" class="btn btn-primary" onclick="postArticle()">기사저장</button>
+</body>
+</html>
